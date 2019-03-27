@@ -1,7 +1,8 @@
-package assignment2;
+package assignment3;
 
-import assignment2.classes.Auto;
-import assignment2.classes.Vervoermiddel;
+import assignment3.classes.Auto;
+
+import static assignment3.classes.Wegenbelasting.berekenWegenbelasting;
 
 public class Main {
 
@@ -13,6 +14,6 @@ public class Main {
         auto.setBrandstof("benzine");
         auto.setGewicht(1998);
 
-        System.out.println("Wegenbelasting is: " + auto.berekenWegenbelasting());
+        System.out.println("Wegenbelasting is: " + berekenWegenbelasting(auto));
     }
 }
