@@ -1,12 +1,12 @@
-package assignment4V2.view;
+package assignment4.view;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
 public class AddPersonView extends JFrame{
-    private JTextField firstNameTextField;
-    private JTextField birthdateTextField;
-    private JTextField lastNameTextField;
+    public JTextField firstNameTextField;
+    public JTextField birthdateTextField;
+    public JTextField lastNameTextField;
     private JPanel AddPersonView;
     private JButton addPersonSubmitButton;
 

@@ -5,13 +5,15 @@ import java.util.List;
 import java.util.Observable;
 
 public class PersonList extends Observable {
-    private static List<Person> people = new ArrayList();
 
-    public static void addPerson(Person person){
-        people.add(person);
+    private List<Person> list = new ArrayList<>();
+
+    public List<Person> getList() {
+        return list;
     }
 
-    public List<Person> getPeople(){
-        return people;
+    public void addPerson(Person person) {
+        list.add(person);
     }
+
 }

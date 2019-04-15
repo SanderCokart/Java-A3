@@ -1,19 +1,15 @@
 package assignment4;
 
-import assignment4.controller.MainController;
+import assignment4.controller.Controller;
 import assignment4.model.PersonList;
-import assignment4.view.MainView;
-
-import javax.swing.*;
+import assignment4.view.AddPersonView;
+import assignment4.view.PersonListView;
 
 public class Runner {
     public static void main(String[] args) {
-        MainView view = new MainView();
-        MainController controller = new MainController();
-        PersonList list = new PersonList();
-        list.addObserver(view);
-
-
-
+        AddPersonView addPersonView = new AddPersonView();
+        PersonList personList = new PersonList();
+        PersonListView personListView = new PersonListView();
+        Controller personController = new Controller(personList, personListView, addPersonView);
     }
 }

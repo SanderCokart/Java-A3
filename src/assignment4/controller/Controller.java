@@ -1,15 +1,13 @@
-package assignment4V2.controller;
+package assignment4.controller;
 
-import assignment4V2.model.Person;
-import assignment4V2.model.PersonList;
-import assignment4V2.view.AddPersonView;
-import assignment4V2.view.PersonListView;
+import assignment4.model.Person;
+import assignment4.model.PersonList;
+import assignment4.view.AddPersonView;
+import assignment4.view.PersonListView;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 public class Controller {
     private PersonList personList;
@@ -43,7 +41,19 @@ public class Controller {
 
             Person person = new Person(firstname,lastname,birthdate);
             personList.addPerson(person);
+            System.out.println(personList.getList());
 
+            DefaultListModel listModel = new DefaultListModel();
+
+            for (int i = 0; i < personList.getList().size(); i++) {
+                listModel.addElement(personList.getList().get(i).export());
+            }
+
+            personListView.personList.setModel(listModel);
+
+            addPersonView.firstNameTextField.setText("");
+            addPersonView.lastNameTextField.setText("");
+            addPersonView.birthdateTextField.setText("");
             addPersonView.dispose();
         }
     }
