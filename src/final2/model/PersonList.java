@@ -1,4 +1,4 @@
-package assignment4.model;
+package final2.model;
 
 import java.util.ArrayList;
 import java.util.List;

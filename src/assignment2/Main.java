@@ -1,7 +1,6 @@
 package assignment2;
 
 import assignment2.classes.Auto;
-import assignment2.classes.Vervoermiddel;
 
 public class Main {
 
